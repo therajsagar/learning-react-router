@@ -9,7 +9,7 @@ const Users = () => <div><h1>Users</h1></div>;
 const App = () => (
   <BrowserRouter>
     <div>
-      <ol>
+      <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -19,7 +19,7 @@ const App = () => (
         <li>
           <Link to="/users">Users</Link>
         </li>
-      </ol>
+      </ul>
       <hr />
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />

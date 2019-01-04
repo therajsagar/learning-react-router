@@ -1,5 +1,13 @@
 import React from 'react';
 
-const Contact = ()=> <h1>Bye Bye!</h1>
+const Contact = ()=> {
+    return(
+        <div>
+            <br/>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.github.com/rajsagargiri">@GitHub</a><br/><br/>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/rx100">@LinkedIn</a>
+        </div>
+    )
+}
 
 export default Contact;

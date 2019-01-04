@@ -26,6 +26,7 @@ const Resume = ()=> {
                <li>HTML+CSS</li>
                <li>Pandas</li>
             </ul>
+            <hr/>
         </div>
     )
 }

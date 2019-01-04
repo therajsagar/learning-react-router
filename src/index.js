@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 const Home = () => <div><h1>Home</h1></div>;
 const About = () => <div><h1>About</h1></div>;
@@ -41,6 +41,8 @@ const Info = ({ match }) => {
   );
 };
 
+const DefaultRoute = ()=> <div><h1>Incorrect URL</h1></div>
+
 const App = () => (
   <BrowserRouter>
     <div>
@@ -50,20 +52,23 @@ const App = () => (
         </li>
         <li>
           <Link to="/about">About</Link>
-        </li>
+        </li> 
         <li>
-          <Link to="/users">Users</Link>
+          <Link to="/users/all">Users All</Link>
         </li>
         <li>
           <Link to="/info">Info</Link>
         </li>
       </ul>
       <hr />
+      <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/info" component={Info} />
-      <Route path="/users/:id" component={Users} />
-      <Route exact path="/users" render={()=> <div><h1>Users</h1></div>} />
+      <Route  path="/users/all" render={()=> <div><h1>Users</h1></div>} />
+      <Route  path="/users/:id" component={Users} />
+      <Route component={DefaultRoute}/>
+      </Switch>
     </div>
   </BrowserRouter>
 );

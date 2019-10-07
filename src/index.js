@@ -1,12 +1,8 @@
-import React from "react";
-import {render} from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
+import App from './components/App.jsx';
+import './index.css';
 
-import "./index.css";
+render(<App />, document.getElementById('root'));
 
-import App from "./components/App.jsx";
-
-
-
-const rootElement = document.getElementById("root");
-
-render(<App />, rootElement);
+module.hot && module.hot.accept();
